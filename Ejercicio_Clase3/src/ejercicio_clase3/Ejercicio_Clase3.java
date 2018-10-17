@@ -18,8 +18,45 @@ public class Ejercicio_Clase3 {
         
         //Rueda ruedita= new Rueda();
         
-        Auto autito= new Auto();
+        Carrera miCarrera= new Carrera();
         
+        System.out.println("Cantidad de competidores: " + Auto.contador);
+           
+        miCarrera.MostrarCarrera();
+        
+        /**
+        eFabricante miMarca;
+        
+        miMarca= eFabricante.FIAT;
+        
+        //System.out.println("Marca: " +miMarca);
+        System.out.println(miMarca.ordinal());//PARA OBTENER EL VALOR NUMERICO
+        * 
+        * 
+        * int x= (int)(Math.random()* eFabricante.values().length);//me devuelve la cantidad de elementos
+        
+        System.out.println(x);
+        //System.out.println("Auto: " +autito.fabricante);
+        * eFabricante marc;
+        marc= eFabricante.values()[x];
+        
+        System.out.println(marc);
+        * 
+        * 
+        for (eFabricante r : eFabricante.values()) //for each recorre colecciones ... r es la variable de control
+        {
+            System.out.println(r.ordinal() + ": " + r);
+            
+        }
+         */
+        
+        
+        
+        
+    }
+
+    private static void MostrarCarrera() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
