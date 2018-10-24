@@ -13,9 +13,9 @@ public class Alumno {
     
     private int _id;
     private String _apellidoNombre;
-    private  String eMail;
-    private String direccion;
-    private float promedio;
+    private  String _eMail;
+    private String _direccion;
+    private float _promedio;
     private int[] _notasIngreso;
     
     //CONSTRUCTORES
@@ -28,8 +28,8 @@ public class Alumno {
     public Alumno(int id, String nombre, String eMail, String dire)
     {
         this(id, nombre);
-        this.eMail= eMail;
-        this.direccion= dire;
+        this._eMail= eMail;
+        this._direccion= dire;
     }
     
     public Alumno(int id, String nombre)
@@ -60,15 +60,15 @@ public class Alumno {
     }
 
     public String geteMail() {
-        return eMail;
+        return _eMail;
     }
 
     public String getDireccion() {
-        return direccion;
+        return _direccion;
     }
 
     public float getPromedio() {
-        return promedio;
+        return _promedio;
     }
 
     public int[] getNotasIngreso() {
@@ -77,7 +77,7 @@ public class Alumno {
     
     public void Set_eMail(String eMail)
     {
-        this.eMail= eMail;
+        this._eMail= eMail;
     }
     
     public void Set_notasIngreso(int[] notasIngreso)
@@ -87,14 +87,14 @@ public class Alumno {
     
     public void Set_direccion(String direccion)
     {
-        this.direccion= direccion;
+        this._direccion= direccion;
     }
     /*
     public String alumno_to_String()
     {
         String miCadena= null;
         
-        miCadena= this._apellidoNombre + this._id + this.eMail + this.direccion + this.promedio;
+        miCadena= this._apellidoNombre + this._id + this._eMail + this._direccion + this._promedio;
         
         for(int nota: this._notasIngreso)
         {
@@ -121,9 +121,9 @@ public class Alumno {
         
         miCadena.append("Nombre: ").append(this._apellidoNombre);
         miCadena.append(" || id: ").append(this._id);
-        miCadena.append(" || eMail: ").append(this.eMail);
-        miCadena.append(" || Direccion: ").append(this.direccion);
-        miCadena.append(" || Promedio: ").append(this.promedio);
+        miCadena.append(" || eMail: ").append(this._eMail);
+        miCadena.append(" || Direccion: ").append(this._direccion);
+        miCadena.append(" || Promedio: ").append(this._promedio);
         
         for(int nota: this._notasIngreso)
         {
@@ -131,6 +131,19 @@ public class Alumno {
         }
         
         return miCadena.toString();
+    }
+    
+    public void MostrarAlumno()
+    {
+        System.out.println("ID: " + this._id);
+        System.out.println("Nombre: " + this._apellidoNombre);
+        System.out.println("E-Mail: " + this._eMail);
+        System.out.println("Direccion: " + this._direccion);
+        for(int nota: this._notasIngreso)
+        {
+            System.out.print(" || Nota: " + nota + " || ");
+        }
+        System.out.println("Promedio: " + this._promedio);
     }
     
     public void CalcularPromedio()
@@ -146,7 +159,7 @@ public class Alumno {
             }
         }
         
-        this.promedio= suma/ cantidad;
+        this._promedio= suma/ cantidad;
     }
     
 }

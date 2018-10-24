@@ -22,12 +22,12 @@ public class ArraysAlumno {
         
         for (int i=0; i<listaAlumnos.length; i++) 
         {
-            listaAlumnos[i]= new Alumno();
             
         }
-        Alumno miAlumno= new Alumno(77, "Mercedes Guerrero", "mer@mer.com", "Valle 45");
+        //Alumno miAlumno= new Alumno(77, "Mercedes Guerrero", "mer@mer.com", "Valle 45");
         
         miAlumno.Set_notasIngreso(notas);
+        
         miAlumno.CalcularPromedio();
         System.out.println(miAlumno.alumno_to_String());
         
