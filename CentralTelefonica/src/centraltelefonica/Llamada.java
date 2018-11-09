@@ -5,6 +5,8 @@
  */
 package centraltelefonica;
 
+import java.util.Comparator;
+
 /**
  *
  * @author capacita_mecon
@@ -58,5 +60,23 @@ public class Llamada {
         System.out.println("Costo por seg: " + miCadena.toString());
     }
     
-    
+    public static Comparator<Llamada> CompaparDuracionAsc = (Llamada s1, Llamada s2) ->
+    {
+        int aux= 0;
+        
+        if(s1._duracion> s2._duracion)
+        {
+            aux= 1;
+        }
+        
+        else
+        {
+            if(s1._duracion<s2._duracion)
+            {
+                aux= -1;
+            }
+        }
+        
+        return aux;
+    }
 }

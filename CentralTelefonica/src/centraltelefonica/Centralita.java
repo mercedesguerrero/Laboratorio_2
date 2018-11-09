@@ -16,8 +16,23 @@ public class Centralita {
     
     private List<Llamada> _listaDeLlamadas;
     protected String razonSocial;
+    
+    Provincial unaProvincial= new Provincial(llamadaComun2, Franja);
+    
+    ArrayList<Llamada> lista= CentralTelefonica.getListaLLamadas;
+    
+    lista.add(unaProvincial);
+    
+    CentralTelefonica.mostrarCentralita();
+    
+    CentralTelefonica.getListaLLamadas().sort(Llamada.CompararDuracionAsc);
+    
+    
+    
+    CentralTelefonica.mostrarCentralita();
 
     //--------CONSTRUCTOR-----------
+    
     
     Centralita()
     {
