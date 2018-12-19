@@ -11,4 +11,8 @@ package mercedes.guerrero;
  */
 public enum ELibro {
     
+    Manual,
+    Novela,
+    Total
+    
 }

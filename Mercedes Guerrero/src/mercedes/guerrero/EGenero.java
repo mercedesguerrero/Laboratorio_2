@@ -11,4 +11,8 @@ package mercedes.guerrero;
  */
 public enum EGenero {
     
+    Accion,
+    Romantica,
+    CienciaFiccion
+    
 }
